@@ -1,0 +1,208 @@
+/* ============ google font link ============ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* ============ google font link ============ */
+
+/* ============ Universal css style ============ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+/* ============ Universal css style ============ */
+
+/* ============ root variable style ============ */
+:root{
+    /* ========== font weight ========== */
+    --ft-thin-size: 100;
+    --ft-extralight-size: 200;
+    --ft-light-size: 300;
+    --ft-regular-size: 400;
+    --ft-medium-size: 500;
+    --ft-semibold-size: 600;
+    --ft-bold-size: 700;
+    --ft-extrabold-size: 800;
+    --ft-black-size: 900;
+    /* ========== font weight ========== */
+
+    /* ========== font size ========== */
+    --ft-size-0-5rem: 0.5rem;
+    --ft-size-1rem: 1rem;
+    --ft-size-1-5rem: 1.5rem;
+    --ft-size-2rem: 2rem;
+    --ft-size-2-5rem: 2.5rem;
+    --ft-size-3rem: 3rem;
+    /* ========== font size ========== */
+
+    /* ========== box-shadow ========== */
+    --box-shadow-0010-alpha: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* ========== box-shadow ========== */
+
+    /* ========== border ========== */
+    --border-2-sol-alpha: 2px solid rgba(255, 255, 255, 0.1);
+    /* ========== border ========== */
+
+    /* ========== border-radius ========== */
+    --border-radiud-0-5rem: 0.5rem;
+    --border-radius-1rem: 1rem;
+    --border-radius-1-5rem: 1.5rem;
+    --border-radius-2rem: 2rem;
+    --border-radius-2-5rem: 2.5rem;
+    --border-radius-3rem: 3rem;
+    /* ========== border-radius ========== */
+}
+/* ============ root variable style ============ */
+
+.bg-image{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logo-text{
+    width: 100%;
+    height: 3.8rem;
+    border-bottom: var(--border-2-sol-alpha);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+}
+.logo-text h1{
+    color: white;
+}
+.content{
+    width: 100%;
+    min-height: calc(100vh - 60.8px);
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+}
+.content .left-content-side{
+    width: 50%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.content .left-content-side .text-items h2,
+.content .left-content-side .text-items h1{
+    margin-bottom: 5px;
+}
+.content .right-content-side{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content .right-content-side .cal-content-items{
+    max-width: 350px;
+    height: auto;
+    padding: 1rem;
+    border: var(--border-2-sol-alpha);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-1rem);
+}
+.content .right-content-side .cal-content-items .display{
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    background: transparent;
+    outline: none;
+    border: var(--border-2-sol-alpha);
+    text-align: right;
+    color: rgb(255, 255, 255);
+    padding: 0 1px 0 0px;
+    border-radius: var(--border-radiud-0-5rem);
+    font-size: var(--ft-size-2rem);
+    pointer-events: none;
+}
+.content .right-content-side .cal-content-items .row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+.content .right-content-side .cal-content-items .row .button{
+    padding: 1rem;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: var(--border-2-sol-alpha);
+}
+.content .right-content-side .cal-content-items .row .button:hover{
+    background-color: rgba(255, 255, 255, 0.151);
+}
+
+/* ========== media qeury ========== */
+@media (max-width: 1080px){
+    .content .right-content-side .cal-content-items{
+        max-width: 300px;
+    }
+    .content .right-content-side .cal-content-items .display{
+        height: 70px;
+    }
+    .content .right-content-side .cal-content-items .row{
+        grid-gap: 8px;
+    }
+    .content .right-content-side .cal-content-items .row .button{
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 962px){
+    .content{
+        padding: 0 2rem;
+    }
+    .logo-text{
+        padding: 0 2rem;
+    }
+    .content .right-content-side .cal-content-items{
+        max-width: 260px;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 768px){
+    .content{
+        padding: 0 1rem;
+    }
+    .logo-text{
+        padding: 0 1rem;
+    }
+    .content .right-content-side .cal-content-items .row{
+        grid-gap: 8px;
+    }
+    .content .right-content-side .cal-content-items .row .button{
+        padding: 0.8rem;
+    }
+    /* .content .right-content-side .cal-content-items .display{
+        font-size: var(--ft-size-1-5rem);
+        height: 50px;
+    } */
+}
+
+@media (max-width: 692px){
+    .content{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .content .left-content-side{
+        margin-top: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+    .content .right-content-side .cal-content-items{
+        margin-bottom: 1rem;
+    }
+    .content .left-content-side .text-items h2,
+    .content .left-content-side .text-items h1{
+        margin-bottom: 4px;
+    }
+    .content .left-content-side .text-items p{
+        font-size: 12px;
+    }
+}
+/* ========== media qeury ========== */
